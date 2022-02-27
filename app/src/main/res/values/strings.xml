@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TrendingGithubRepositories</string>
+    <string name="please_wait">Please wait</string>
+    <string name="trending">Trending</string>
+    <string name="something_went_wrong">Something went wrong..</string>
+    <string name="an_alien_is_probably_blocking_your_signal">An alien is probably blocking your signal.</string>
+    <string name="retry">Retry</string>
+    <string name="sort_by_stars">Sort by stars</string>
+    <string name="sort_by_name">Sort by name</string>
+</resources>

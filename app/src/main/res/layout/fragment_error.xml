@@ -1,0 +1,77 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.trendinggithubrepositories.ErrorViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BEF1F0F0">
+
+        <ImageView
+            android:id="@+id/iv_no_internet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_no_internet"
+            app:layout_constraintBottom_toTopOf="@+id/tv_something_went_wrong"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_something_went_wrong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_24"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/something_went_wrong"
+            android:textSize="@dimen/text_size_18"
+            app:layout_constraintBottom_toTopOf="@+id/tv_something_went_wrong_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_no_internet"
+            tools:layout_editor_absoluteX="130dp" />
+
+        <TextView
+            android:id="@+id/tv_something_went_wrong_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/roboto"
+            android:text="@string/an_alien_is_probably_blocking_your_signal"
+            android:textColor="@color/grey_929292"
+            android:textSize="@dimen/text_size_15"
+            app:layout_constraintBottom_toTopOf="@+id/btn_try_without_remote"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_something_went_wrong"
+            tools:layout_editor_absoluteX="78dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_try_without_remote"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginHorizontal="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:background="@drawable/outline_button_normal_black_border"
+            android:enabled="true"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/retry"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_size_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

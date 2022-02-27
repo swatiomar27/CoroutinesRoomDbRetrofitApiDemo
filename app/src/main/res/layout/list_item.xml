@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_48"
+            android:paddingHorizontal="@dimen/margin_16"
+            android:text="http://www.youtube.com"
+            android:textColor="@color/color_52575c"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_tech"
+            android:layout_width="@dimen/iv_icons"
+            android:layout_height="@dimen/iv_icons"
+            android:layout_marginStart="@dimen/margin_64"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@color/red"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+        <TextView
+            android:id="@+id/tv_tech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/roboto"
+            android:text="Python"
+            android:textColor="@color/color_52575c"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_tech"
+            app:layout_constraintStart_toEndOf="@id/iv_tech"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail" />
+
+        <ImageView
+            android:id="@+id/iv_star"
+            android:layout_width="@dimen/iv_icons"
+            android:layout_height="@dimen/iv_icons"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:contentDescription="ivStar"
+            android:src="@drawable/ic_star"
+            app:layout_constraintStart_toEndOf="@id/tv_tech"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_stars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/roboto"
+            android:text="14,236"
+            android:textColor="@color/color_52575c"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_star"
+            app:layout_constraintStart_toEndOf="@id/iv_star"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail" />
+
+        <ImageView
+            android:id="@+id/iv_fork"
+            android:layout_width="@dimen/iv_icons"
+            android:layout_height="@dimen/iv_icons"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_8"
+            android:contentDescription="ivFork"
+            android:src="@drawable/ic_fork"
+            app:layout_constraintStart_toEndOf="@id/tv_stars"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tv_fork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_4"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/roboto"
+            android:text="4,376"
+            android:textColor="@color/color_52575c"
+            android:textSize="@dimen/text_size_12"
+            app:layout_constraintStart_toEndOf="@id/iv_fork"
+            app:layout_constraintTop_toBottomOf="@id/tv_detail" />
+
+        <View
+            android:id="@+id/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="@dimen/margin_16"
+            android:background="@drawable/shadow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_fork" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

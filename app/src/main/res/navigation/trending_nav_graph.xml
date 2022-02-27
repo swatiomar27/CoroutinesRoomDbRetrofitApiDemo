@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/trending_nav_graph.xml"
+    app:startDestination="@id/trendingFragment">
+
+    <fragment
+        android:id="@+id/trendingFragment"
+        android:name="com.example.trendinggithubrepositories.TrendingFragment"
+        android:label="TrendingFragment">
+        <action
+            android:id="@+id/action_trendingFragment_to_errorFragment"
+            app:destination="@id/errorFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/errorFragment"
+        android:name="com.example.trendinggithubrepositories.ErrorFragment"
+        android:label="ErrorFragment">
+        <action
+            android:id="@+id/xml"
+            app:destination="@id/trending_nav_graph.xml"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_errorFragment_to_trendingFragment2"
+            app:destination="@id/trendingFragment" />
+    </fragment>
+</navigation>
